@@ -7,6 +7,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js" charset="utf-8"></script>
     <script src="./js/app.js" charset="utf-8"></script>
     <script src="./js/datasetController.js" charset="utf-8"></script>
+    <!-- <script src="./js/domFunctions.js" charset="utf-8"></script> -->
     <title>Open Data Portal analyzer</title>
   </head>
   <body>
@@ -15,13 +16,21 @@
 
     </header>
     <main ng-controller="DatasetController as dataset">
-      <p>Angular is working {{ 1 === 1 }}</p>
-      <p>{{ dataset.foo }}</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      <input class="mdl-slider mdl-js-slider" type="range" min="0" max="100" ng-model="dataset.sliderValue" tabindex="0">
+      <h2>Forward slider</h2>
+      <p>Illustrates a 'here's what you get' scenario if you spend this much money.</p>
+      <input class="" type="range" min="0" max="100" ng-model="dataset.sliderValue" tabindex="0" id="forwardSlider">
 
       {{ dataset.sliderValue }}
       <div class="" ng-repeat="db in dataset.databases" ng-if="db.cost < dataset.sliderValue">
+        <p>{{ db.name }}; {{ db.cost }}</p>
+      </div>
+      <h2>Reverse slider</h2>
+      <p>Illustrates a 'here's what you lose' scenario if you cut this much money.</p>
+
+      <input class="" type="range" min="0" max="100" ng-model="dataset.reverseSliderValue" tabindex="0" id="reverseSlider">
+
+      {{ dataset.reverseSliderValue }}
+      <div class="" ng-repeat="db in dataset.databases" ng-if="db.cost > dataset.reverseSliderValue">
         <p>{{ db.name }}; {{ db.cost }}</p>
       </div>
 

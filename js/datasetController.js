@@ -7,6 +7,7 @@
 
     this.foo = 'blue';
     this.sliderValue = 0;
+    this.reverseSliderValue = 0;
 
     this.databases = [
       {
@@ -19,7 +20,7 @@
       },
       {
         name: 'third',
-        cost: 15
+        cost: 55
       }
     ];
 
