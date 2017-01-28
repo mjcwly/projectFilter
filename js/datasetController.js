@@ -2,7 +2,9 @@
   angular.module('dataPortalApp')
     .controller('DatasetController', DatasetController);
 
-  function DatasetController(){
+  DatasetController.$inject = ['$http','$state'];
+
+  function DatasetController($http, $state){
     let self = this;
 
     this.foo = 'blue';

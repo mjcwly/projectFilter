@@ -1,3 +1,3 @@
 (function(){
-  angular.module('dataPortalApp', []);
+  angular.module('dataPortalApp', ['ui.router']);
 })();

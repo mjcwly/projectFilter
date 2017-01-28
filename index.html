@@ -4,15 +4,27 @@
     <link rel="stylesheet" href="./css/main.css" media="screen" title="no title">
     <meta charset="utf-8">
     <meta name="description" content="What-if analysis to guide a pick which Open Data Portal data sets can be deprecated.">
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js" charset="utf-8"></script>
+    <!-- Angular -->
+    <!-- Using non-minified version for testing b/c has better error messages: change this when shipping -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js" charset="utf-8"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.js" charset="utf-8"></script>
     <script src="./js/app.js" charset="utf-8"></script>
+    <script src="./js/router.js" charset="utf-8"></script>
     <script src="./js/datasetController.js" charset="utf-8"></script>
+    <!-- UI router 0.2.18 downloaded 1/27/2017 -->
+    <script src="./js/angular-ui-router.min.js"></script>
     <title>Open Data Portal analyzer</title>
   </head>
   <body>
     <header>
-      <h1>Data data data</h1>
-
+      <h1>Data portal choices</h1>
+      <nav>
+        <ul>
+          <li><a ui-sref="index">Index</a></li>
+          <li><a ui-sref="additive">What you get for a certain budget</a></li>
+          <li><a ui-sref="subtractive">What gets cut with certain budget cuts</a></li>
+        </ul>
+      </nav>
     </header>
     <main ng-controller="DatasetController as dataset">
       <h2>Forward slider</h2>
@@ -32,6 +44,8 @@
       <div class="" ng-repeat="db in dataset.databases" ng-if="db.cost > dataset.reverseSliderValue">
         <p>{{ db.name }}; {{ db.cost }}</p>
       </div>
+
+      <section ui-view class="page-content"></section>
 
     </main>
   </body>
