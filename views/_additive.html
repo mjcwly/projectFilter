@@ -3,9 +3,8 @@
   <h2>Forward slider</h2>
   <p>Illustrates a 'here's what you get' scenario if you spend this much money.</p>
   <input class="" type="range" min="0" max="100" ng-model="dataset.forwardSliderValue" tabindex="0" id="forwardSlider">
-  {{ dataset.sliderValue }}
-  <!-- <div class="" ng-repeat="ds in dataset.allDatasets" ng-if="ds.cost < dataset.forwardSliderValue">
+  {{ dataset.forwardSliderValue }}
+  <div class="" ng-repeat="ds in dataset.allDatasets" ng-if="ds.cost < dataset.forwardSliderValue">
     <p>{{ ds.name }}; {{ ds.cost }}</p>
-  </div> -->
-
+  </div>
 </section>
