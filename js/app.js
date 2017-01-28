@@ -1,3 +1,3 @@
 (function(){
-  const app = angular.module('dataPortalApp', []);
+  angular.module('dataPortalApp', []);
 })();
