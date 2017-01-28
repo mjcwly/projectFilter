@@ -1,1 +1,10 @@
-<h2>Here's what you get for a set amount of budget</h2>
+<section>
+  <h2>Here's what you get for a set amount of budget</h2>
+  <h2>Forward slider</h2>
+  <p>Illustrates a 'here's what you get' scenario if you spend this much money.</p>
+  <input class="" type="range" min="0" max="100" ng-model="dataset.sliderValue" tabindex="0" id="forwardSlider">
+  {{ dataset.sliderValue }}
+  <div class="" ng-repeat="db in dataset.databases" ng-if="db.cost < dataset.sliderValue">
+    <p>{{ db.name }}; {{ db.cost }}</p>
+  </div>
+</section>

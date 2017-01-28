@@ -11,7 +11,7 @@
     <script src="./js/app.js" charset="utf-8"></script>
     <script src="./js/router.js" charset="utf-8"></script>
     <script src="./js/datasetController.js" charset="utf-8"></script>
-    <!-- UI router 0.2.18 downloaded 1/27/2017 -->
+    <!-- UI router 0.4.0 downloaded 1/27/2017; CDN didn't work -->
     <script src="./js/angular-ui-router.min.js"></script>
     <title>Open Data Portal analyzer</title>
   </head>
@@ -27,23 +27,6 @@
       </nav>
     </header>
     <main ng-controller="DatasetController as dataset">
-      <h2>Forward slider</h2>
-      <p>Illustrates a 'here's what you get' scenario if you spend this much money.</p>
-      <input class="" type="range" min="0" max="100" ng-model="dataset.sliderValue" tabindex="0" id="forwardSlider">
-
-      {{ dataset.sliderValue }}
-      <div class="" ng-repeat="db in dataset.databases" ng-if="db.cost < dataset.sliderValue">
-        <p>{{ db.name }}; {{ db.cost }}</p>
-      </div>
-      <h2>Reverse slider</h2>
-      <p>Illustrates a 'here's what you lose' scenario if you cut this much money.</p>
-
-      <input class="" type="range" min="0" max="100" ng-model="dataset.reverseSliderValue" tabindex="0" id="reverseSlider">
-
-      {{ dataset.reverseSliderValue }}
-      <div class="" ng-repeat="db in dataset.databases" ng-if="db.cost > dataset.reverseSliderValue">
-        <p>{{ db.name }}; {{ db.cost }}</p>
-      </div>
 
       <section ui-view class="page-content"></section>
 

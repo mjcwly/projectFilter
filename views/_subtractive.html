@@ -1,1 +1,8 @@
-<h2>Here's what is cut by cutting the budget</h2>
+<section>
+  <h2>Here's what is cut by cutting the budget</h2>
+  <input class="" type="range" min="0" max="100" ng-model="dataset.reverseSliderValue" tabindex="0" id="reverseSlider">
+  {{ dataset.reverseSliderValue }}
+  <div class="" ng-repeat="db in dataset.databases" ng-if="db.cost > dataset.reverseSliderValue">
+    <p>{{ db.name }}; {{ db.cost }}</p>
+  </div>
+</section>
