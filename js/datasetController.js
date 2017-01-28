@@ -5,26 +5,38 @@
   DatasetController.$inject = ['$http','$state'];
 
   function DatasetController($http, $state){
-    let self = this;
+    let vm = this;
 
-    this.foo = 'blue';
-    this.sliderValue = 0;
-    this.reverseSliderValue = 0;
+    //attributes
+    vm.allDatasets = [];
+    vm.forwardSliderValue = 0;
+    vm.reverseSliderValue = 0;
 
-    this.databases = [
-      {
-        name: 'first',
-        cost: 20
-      },
-      {
-        name: 'second',
-        cost: 85
-      },
-      {
-        name: 'third',
-        cost: 55
-      }
-    ];
+
+
+    //methods
+
+    //run on load
+    getDatasets();
+
+    //begin callback declarations
+
+    function getDatasets() {
+      vm.allDatasets = [
+        {
+          name: 'first',
+          cost: 20
+        },
+        {
+          name: 'second',
+          cost: 85
+        },
+        {
+          name: 'third',
+          cost: 55
+        }
+      ];
+    }//end getDatasets
 
   }//end DatasetController
 })();
