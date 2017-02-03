@@ -24,16 +24,32 @@
     function getDatasets() {
       vm.allDatasets = [
         {
-          name: 'first',
-          cost: 20
+          name: 'cost of living index',
+          reliedOnBy: [],
+          totalCost: 20,
+          unitCost: 20,
+          updatedAt: Date('1-1-2016')
         },
         {
-          name: 'second',
-          cost: 85
+          name: 'transit master data',
+          reliedOnBy: ['train ridership'],
+          totalCost: 10,
+          unitCost: 10,
+          updatedAt: Date('1-1-2017')
         },
         {
-          name: 'third',
-          cost: 55
+          name: 'train ridership',
+          reliedOnBy: [],
+          totalCost: 65,
+          unitCost: 55,
+          updatedAt: Date('1-1-2017')
+        },
+        {
+          name: 'dataset foo',
+          reliedOnBy: [],
+          totalCost: 30,
+          unitCost: 30,
+          updatedAt: Date('6-15-2016')
         }
       ];
     }//end getDatasets

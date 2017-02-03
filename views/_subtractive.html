@@ -1,8 +1,8 @@
-<section>
+<section class="view-section">
   <h2>Here's what is cut by cutting the budget</h2>
   <input class="" type="range" min="0" max="100" ng-model="dataset.reverseSliderValue" tabindex="0" id="reverseSlider">
   {{ dataset.reverseSliderValue }}
-  <div class="" ng-repeat="ds in dataset.allDatasets" ng-if="ds.cost > dataset.reverseSliderValue">
-    <p>{{ ds.name }}; {{ ds.cost }}</p>
+  <div class="" ng-repeat="ds in dataset.allDatasets" ng-if="ds.totalCost > dataset.reverseSliderValue">
+    <p>{{ ds.name }}; {{ ds.totalCost }}</p>
   </div>
 </section>

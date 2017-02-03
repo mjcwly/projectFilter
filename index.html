@@ -8,6 +8,9 @@
     <!-- Using non-minified version for testing b/c has better error messages: change this when shipping -->
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js" charset="utf-8"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.js" charset="utf-8"></script>
+    <!-- Google Graphs -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <!-- Local files -->
     <script src="./js/app.js" charset="utf-8"></script>
     <script src="./js/router.js" charset="utf-8"></script>
     <script src="./js/datasetController.js" charset="utf-8"></script>
@@ -21,6 +24,7 @@
       <nav>
         <ul>
           <li><a ui-sref="index">Index</a></li>
+          <li><a ui-sref="freshness">Is Austin's data fresh?</a></li>
           <li><a ui-sref="additive">What you get for a certain budget</a></li>
           <li><a ui-sref="subtractive">What gets cut with certain budget cuts</a></li>
         </ul>

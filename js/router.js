@@ -8,13 +8,17 @@
     $urlRouterProvider.otherwise("/");
 
     $stateProvider
-      .state('index', {
-        url: '/',
-        templateUrl: '/views/_index.html'
-      })
       .state('additive', {
         url: '/additive',
         templateUrl: '/views/_additive.html'
+      })
+      .state('freshness', {
+        url: '/freshness',
+        templateUrl: '/views/_freshness.html'
+      })
+      .state('index', {
+        url: '/',
+        templateUrl: '/views/_index.html'
       })
       .state('subtractive', {
         url: '/subtractive',
