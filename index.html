@@ -13,6 +13,7 @@
     <!-- Local files -->
     <script src="./js/app.js" charset="utf-8"></script>
     <script src="./js/router.js" charset="utf-8"></script>
+    <script src="./js/graphFactory.js" charset="utf-8"></script>
     <script src="./js/datasetController.js" charset="utf-8"></script>
     <!-- UI router 0.4.0 downloaded 1/27/2017; CDN didn't work -->
     <script src="./js/angular-ui-router.min.js"></script>
@@ -31,7 +32,7 @@
       </nav>
     </header>
     <main ng-controller="DatasetController as dataset">
-
+      {{ dataset.factoryData }}
       <section ui-view class="page-content"></section>
 
     </main>

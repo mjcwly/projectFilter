@@ -2,17 +2,16 @@
   angular.module('dataPortalApp')
     .controller('DatasetController', DatasetController);
 
-  DatasetController.$inject = ['$http','$state'];
+  DatasetController.$inject = ['$http','$state', 'graphFactory'];
 
-  function DatasetController($http, $state){
+  function DatasetController($http, $state, graphFactory){
     let vm = this;
 
     //attributes
     vm.allDatasets = [];
     vm.forwardSliderValue = 0;
     vm.reverseSliderValue = 0;
-
-
+    vm.factoryData = graphFactory.foo;
 
     //methods
 
