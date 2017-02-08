@@ -1,3 +1,8 @@
-html {
+/*html {
   background: rgba(180,243,255,1);
+}*/
+
+#freshness-chart {
+  height: 500px;
+  width: 900px;
 }

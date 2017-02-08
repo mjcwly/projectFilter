@@ -2,9 +2,9 @@
   angular.module('dataPortalApp')
     .controller('DatasetController', DatasetController);
 
-  DatasetController.$inject = ['$http','$state', 'graphFactory'];
+  DatasetController.$inject = ['$http','$state', '$transitions', 'graphFactory'];
 
-  function DatasetController($http, $state, graphFactory){
+  function DatasetController($http, $state, $transitions, graphFactory){
     let vm = this;
 
     //attributes
@@ -52,6 +52,10 @@
         }
       ];
     }//end getDatasets
+
+    $transitions.onSuccess({}, function() {
+      console.log('transition successful');
+    });
 
   }//end DatasetController
 })();

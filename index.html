@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="dataPortalApp">
   <head>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/main.css" media="screen" title="no title">
+
     <meta charset="utf-8">
     <meta name="description" content="What-if analysis to guide a pick which Open Data Portal data sets can be deprecated.">
     <!-- Angular -->
@@ -16,23 +18,22 @@
     <script src="./js/graphFactory.js" charset="utf-8"></script>
     <script src="./js/datasetController.js" charset="utf-8"></script>
     <!-- UI router 0.4.0 downloaded 1/27/2017; CDN didn't work -->
-    <script src="./js/angular-ui-router.min.js"></script>
+    <script src="./js/ui-router/angular-ui-router.min.js"></script>
     <title>Open Data Portal analyzer</title>
   </head>
   <body>
     <header>
       <h1>Data portal choices</h1>
-      <nav>
-        <ul>
-          <li><a ui-sref="index">Index</a></li>
-          <li><a ui-sref="freshness">Is Austin's data fresh?</a></li>
-          <li><a ui-sref="additive">What you get for a certain budget</a></li>
-          <li><a ui-sref="subtractive">What gets cut with certain budget cuts</a></li>
+      <nav class="navbar navbar-inverse" role="navigation">
+        <ul class="nav navbar-nav">
+          <li><a ui-sref="index" class="nav-link">Index</a></li>
+          <li><a ui-sref="freshness" class="nav-link">Is Austin's data fresh?</a></li>
+          <li><a ui-sref="additive" class="nav-link">What you get for a certain budget</a></li>
+          <li><a ui-sref="subtractive" class="nav-link">What gets cut with certain budget cuts</a></li>
         </ul>
       </nav>
     </header>
     <main ng-controller="DatasetController as dataset">
-      {{ dataset.factoryData }}
       <section ui-view class="page-content"></section>
 
     </main>
