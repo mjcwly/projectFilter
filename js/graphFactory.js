@@ -11,7 +11,7 @@
     //methods
     result.drawStalenessGraph = drawStalenessGraph;
 
-
+    //begin callback declarations
     function drawStalenessGraph() {
       google.charts.load('current', {'packages':['corechart']});
       google.charts.setOnLoadCallback(drawChart);
