@@ -2,10 +2,11 @@
   angular.module('dataPortalApp')
     .config(DataPortalRouter);
 
-  // DataPortalRouter.$inject = ['$stateProvider', '$urlRouterProvider', '$locationProvider', 'graphFactory'];
-  DataPortalRouter.$inject = ['$stateProvider', '$urlRouterProvider', '$locationProvider'];
+  DataPortalRouter.$inject = ['$stateProvider', '$urlRouterProvider', '$locationProvider', 'graphProvider'];
+  // DataPortalRouter.$inject = ['$stateProvider', '$urlRouterProvider', '$locationProvider'];
 
-  function DataPortalRouter($stateProvider, $urlRouterProvider, $locationProvider) {
+  function DataPortalRouter($stateProvider, $urlRouterProvider, $locationProvider, graphProvider) {
+  // function DataPortalRouter($stateProvider, $urlRouterProvider, $locationProvider) {
     $urlRouterProvider.otherwise("/");
 
     $stateProvider
@@ -17,7 +18,7 @@
         url: '/freshness',
         templateUrl: '/views/_freshness.html',
         onEnter: function() {
-          console.log('graphFactory');
+          console.log('foo');
         }
       })
       .state('index', {
